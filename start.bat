@@ -1,0 +1,1 @@
+qemu-system-arm -kernel kernel-qemu-4.14.50-stretch -dtb versatile-pb.dtb -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "rw console=ttyAMA0 root=/dev/sda2 rootfstype=ext4  loglevel=8 rootwait fsck.repair=yes memtest=1 " -drive "file=2018-11-13-raspbian-stretch-lite.img,index=0,media=disk,format=raw" -nic user,hostfwd=tcp::5555-:22
